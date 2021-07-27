@@ -1,0 +1,1 @@
+To run the code, choose "Makefile project with existing code" in eclipse. And if there are some linker errors, import the configM.xml file in the project settings. Also, you might have to install libxml++-2.6 and glibmm-2.4 libraries in Linux. If you face any run time errors, please let me know.

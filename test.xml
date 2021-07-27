@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <hdw_config nr_tiles="05" timely_block="ACTIVE">
+
+        <nr_ports id="0" value="0C" />
+        <nr_ports id="1" value="0C" />
+        <nr_ports id="2" value="0C" />
+        <nr_ports id="3" value="06" />
+        <nr_ports id="4" value="06" />
+        <nr_out_ports id="0" value="06" />
+        <nr_out_ports id="1" value="06" />
+        <nr_out_ports id="2" value="06" />
+        <nr_out_ports id="3" value="08" />
+        <nr_out_ports id="4" value="08" />
+        <phaseslice_width_TT value="08" />
+        <phaseslice_width_ET value="0A" />
+        <nr_periods_TT value="02" />
+        <nr_periods_ET value="02" />
+        <period_delta_TT value="01" />
+        <period_delta_ET value="01" />
+        <msb_periodbit_TT value="15" />
+        <msb_periodbit_ET value="15" />
+        <period_enable_TT value="0000000000000003" />
+        <period_enable_ET value="0000000000000003" />
+    </hdw_config>
+    <port_configs_lrs>
+        <port_config_lrs name="lrs0">
+            <p_config id="0" enable="ENABLE">
+                <port_specs port_type="TT" direction="OUT" semantics="STATE" />
+                <buffer_size value="010" />
+                <queue_length value="001" />
+                <destination_address cluster_id="00" node_id="00" tile_id="01" port_id="06" />
+                <mint value="0000000000000000" />
+            </p_config>
+
+            <p_config id="1" enable="DISABLE">
+                <port_specs port_type="RC1" direction="OUT" semantics="EVENT" />
+                <buffer_size value="010" />
+                <queue_length value="001" />
+                <destination_address cluster_id="00" node_id="00" tile_id="02" port_id="06" />
+                <mint value="0000000000000000" />
+            </p_config>
+
+            <p_config id="2" enable="ENABLE">
+                <port_specs port_type="RC1" direction="OUT" semantics="STATE" />
+                <buffer_size value="010" />
+                <queue_length value="001" />
+                <destination_address cluster_id="00" node_id="00" tile_id="01" port_id="08" />
+                <mint value="0000000000200000" />
+            </p_config>
+        </port_config_lrs>
+
+        <port_config_lrs name="lrs1">
+            <p_config id="0" enable="ENABLE">
+                <port_specs port_type="TT" direction="OUT" semantics="STATE" />
+                <buffer_size value="016" />
+                <queue_length value="001" />
+                <destination_address cluster_id="00" node_id="00" tile_id="01" port_id="06" />
+                <mint value="0000000000000000" />
+            </p_config>
+
+            <p_config id="1" enable="DISABLE">
+                <port_specs port_type="RC2" direction="OUT" semantics="EVENT" />
+                <buffer_size value="013" />
+                <queue_length value="001" />
+                <destination_address cluster_id="00" node_id="00" tile_id="06" port_id="06" />
+                <mint value="0000000000000000" />
+            </p_config>
+
+            <p_config id="2" enable="ENABLE">
+                <port_specs port_type="RC1" direction="OUT" semantics="STATE" />
+                <buffer_size value="018" />
+                <queue_length value="001" />
+                <destination_address cluster_id="00" node_id="00" tile_id="01" port_id="08" />
+                <mint value="0000000000200000" />
+            </p_config>
+        </port_config_lrs>
+    </port_configs_lrs>
+</configuration>

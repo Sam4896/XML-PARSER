@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="C++ Source File">
+<includepath>/usr/include/libxml++-2.6</includepath>
+<includepath>/usr/lib/x86_64-linux-gnu/libxml++-2.6/include</includepath>
+<includepath>/usr/include/libxml2</includepath>
+<includepath>/usr/include/glibmm-2.4</includepath>
+<includepath>/usr/lib/x86_64-linux-gnu/glibmm-2.4/include</includepath>
+<includepath>/usr/include/glib-2.0</includepath>
+<includepath>/usr/lib/x86_64-linux-gnu/glib-2.0/include</includepath>
+<includepath>/usr/include/sigc++-2.0</includepath>
+<includepath>/usr/lib/x86_64-linux-gnu/sigc++-2.0/include</includepath>
+
+</language>
+<language name="C Source File">
+<includepath>/usr/include/libxml++-2.6</includepath>
+<includepath>/usr/lib/x86_64-linux-gnu/libxml++-2.6/include</includepath>
+<includepath>/usr/include/libxml2</includepath>
+<includepath>/usr/include/glibmm-2.4</includepath>
+<includepath>/usr/lib/x86_64-linux-gnu/glibmm-2.4/include</includepath>
+<includepath>/usr/include/glib-2.0</includepath>
+<includepath>/usr/lib/x86_64-linux-gnu/glib-2.0/include</includepath>
+<includepath>/usr/include/sigc++-2.0</includepath>
+<includepath>/usr/lib/x86_64-linux-gnu/sigc++-2.0/include</includepath>
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.Macros">
+<language name="C++ Source File">
+
+</language>
+<language name="C Source File">
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+</cdtprojectproperties>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="hdw_config">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="nr_ports">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="nr_out_ports">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="phaseslice_width_TT">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="phaseslice_width_ET">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="nr_periods_TT">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="nr_periods_ET">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="period_delta_TT">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="period_delta_ET">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="msb_periodbit_TT">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="msb_periodbit_ET">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString2" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="period_enable_TT">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString16" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="period_enable_ET">
+                <xs:complexType>
+                  <xs:attribute name="value" type="RestrictString16" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nr_tiles" type="RestrictString2" use="required" />
+            <xs:attribute name="timely_block" type="timelyBlockCategory" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="port_configs_lrs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="port_config_lrs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="p_config">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="port_specs">
+                            <xs:complexType>
+                              <xs:attribute name="port_type" type="portTypeCategory" use="required" />
+                              <xs:attribute name="direction" type="directionCategory" use="required" />
+                              <xs:attribute name="semantics" type="semanticsCategory" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="buffer_size">
+                            <xs:complexType>
+                              <xs:attribute name="value" type="RestrictString3" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="queue_length">
+                            <xs:complexType>
+                              <xs:attribute name="value" type="RestrictString3" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="destination_address">
+                            <xs:complexType>
+                              <xs:attribute name="cluster_id" type="RestrictString2" use="required" />
+                              <xs:attribute name="node_id" type="RestrictString2" use="required" />
+                              <xs:attribute name="tile_id" type="RestrictString2" use="required" />
+                              <xs:attribute name="port_id" type="RestrictString2" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="mint">
+                            <xs:complexType>
+                              <xs:attribute name="value" type="RestrictString16" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="enable" type="enableCategory" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+      <xs:simpleType name="RestrictString1">
+        <xs:restriction base="xs:string">
+            <xs:length value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RestrictString2">
+        <xs:restriction base="xs:string">
+            <xs:length value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RestrictString3">
+        <xs:restriction base="xs:string">
+            <xs:length value="3" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RestrictString16">
+        <xs:restriction base="xs:string">
+            <xs:length value="16"/>
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="portTypeCategory">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TT" />
+            <xs:enumeration value="RC1" />
+			<xs:enumeration value="RC2" />
+			<xs:enumeration value="BE" />
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="directionCategory">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OUT" />
+            <xs:enumeration value="IN" />
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="semanticsCategory">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="EVENT" />
+            <xs:enumeration value="STATE" />
+        </xs:restriction>
+    </xs:simpleType>
+
+	<xs:simpleType name="enableCategory">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ENABLE" />
+            <xs:enumeration value="DISABLE" />
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="timelyBlockCategory">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ACTIVE" />
+            <xs:enumeration value="INACTIVE" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
